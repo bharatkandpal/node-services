@@ -1,0 +1,59 @@
+
+//books service
+GET http://localhost:3000/
+
+###
+POST http://localhost:3000/book
+content-type: application/json
+
+{
+    "title":"why this series",
+    "author":"kandpal new",
+    "numberPages":1000,
+    "publisher":"test Publications"
+}
+
+###
+GET http://localhost:3000/books
+
+###
+DELETE  http://localhost:3000/book/.
+
+
+
+//customers service
+###
+GET http://localhost:4444/
+###
+POST http://127.0.0.1:4444/customer
+Content-Type: application/json
+
+{
+    "name":"JaneasdfasdfDoe",
+    "age":-1,
+    "address":"Unknown"
+
+}
+
+###
+GET http://localhost:4444/customers
+
+###
+DELETE http://localhost:4444/customer/6134dc483df6d960040fe4d0
+
+//orders service
+###
+POST http://localhost:5555/order
+Content-Type: application/json
+
+{
+    "BookID":"61376bc34ee7cb93f81701b5",
+    "CustomerID":"6134d81ff303c404657e6b5d",
+    "initialDate":"2021-09-01",
+    "deliveryDate":"2021-09-04"
+}
+###
+GET http://localhost:5555/orders
+
+###
+GET http://localhost:5555/order/61376cae884eff8b4b65264e
